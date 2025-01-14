@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#Implement something to handle the special characters (printf)
 
 # Defines a universal notes file.
 notes_file="notes.txt"
@@ -64,7 +65,7 @@ case "$1" in
     "search")
         search_notes "$2"
         ;;
-    # Added an exit code for some more error detection.
+    # Added an exit code for if none of the operations above are used.
     *)
         echo "Please use one of the following operations: add, list, or search"
         exit 1
