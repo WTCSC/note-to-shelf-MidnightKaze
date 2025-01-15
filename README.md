@@ -10,7 +10,8 @@ It's so easy to use this that my mom could probably use it. Just start by downlo
 
 Ok, using this is as simple as knowing these three things:
 
-- __./note.sh add [your note]__ - Which will do what it seems to do. It'll take your note and add it to the grand notes.txt file (which stores all of your notes).
+- __./note.sh add [your note]__ - Which will do what it seems to do. It'll take your note and add it to the grand notes.txt file (which stores all of your notes). 
+    ___! Just a note, if you want to add a double quote you'll have to do this: backslash double quote \ " (with no space) !___
 
 - __./note.sh list__ - Which will list all of the notes you have ever made.
 

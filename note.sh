@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#Implement something to handle the special characters (printf)
+#Implement some logging... if we need formal logging not sure what it means by that...
 
 # Defines a universal notes file.
 notes_file="notes.txt"
@@ -27,7 +27,7 @@ add_note() {
     # Defines that the local time is equal to well, the date and time.
     local time=$(date '+%Y-%m-%d %H:%M:%S')
 
-    # Appends that back to the notes file (notes.txt).
+    # Appends that back to the notes file (notes.txt) using printf to help account for special characters.
     printf "%s - %s\n" "$time" "$new_note" >> "$notes_file"
     echo "Note added successfully"
 }
