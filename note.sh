@@ -18,11 +18,17 @@ add_note() {
     # Defines that the local note text is equal to the inputed message.
     local new_note="$1"
 
+    # Added an exit code for some error detection.
+    if [[ -z "$new_note" ]]; then
+        echo "Please input a note"
+        exit 1
+    fi
+
     # Defines that the local time is equal to well, the date and time.
     local time=$(date '+%Y-%m-%d %H:%M:%S')
 
     # Appends that back to the notes file (notes.txt).
-    echo "$time - $new_note" >> "$notes_file"
+    echo "$time - $1" >> "$notes_file"
     echo "Note added succesfully"
 }
 
