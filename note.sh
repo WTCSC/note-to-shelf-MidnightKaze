@@ -16,7 +16,7 @@ make_file() {
 # Adds the note to the note.
 add_note() {
     # Defines that the local note text is equal to the inputed message.
-    local new_note="$1"
+    new_note="$1"
 
     # Added an exit code for some error detection.
     if [[ -z "$new_note" ]]; then
@@ -28,8 +28,8 @@ add_note() {
     local time=$(date '+%Y-%m-%d %H:%M:%S')
 
     # Appends that back to the notes file (notes.txt).
-    echo "$time - $1" >> "$notes_file"
-    echo "Note added succesfully"
+    printf "%s - %s\n" "$time" "$new_note" >> "$notes_file"
+    echo "Note added successfully"
 }
 
 # List the notes list.
